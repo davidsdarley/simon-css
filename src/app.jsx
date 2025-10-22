@@ -2,8 +2,9 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
 
-import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
-import { Login } from './login/login';
+import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom'; //The library that allows the router to work
+
+import { Login } from './login/login';  //All the things from my other pages that the router uses
 import { Play } from './play/play';
 import { Scores } from './scores/scores';
 import { About } from './about/about';
