@@ -29,6 +29,7 @@ const GameEvent = {
     broadcastEvent(from, type, value) {
       const event = new EventMessage(from, type, value);
       this.receiveEvent(event);
+      console.log("broadcast Complete")
     }
   
     addHandler(handler) {

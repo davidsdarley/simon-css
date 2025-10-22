@@ -15,7 +15,6 @@ export function Players(props) {
       GameNotifier.removeHandler(handleGameEvent);
     };
   }, []);
-
   function handleGameEvent(event) {
     setEvent((prevEvents) => {
       let newEvents = [event, ...prevEvents];
@@ -25,10 +24,10 @@ export function Players(props) {
       return newEvents;
     });
   }
-
   function createMessageArray() {
     const messageArray = [];
     for (const [i, event] of events.entries()) {
+        console.log("Processing events", event, i);
       let message = 'unknown';
       if (event.type === GameEvent.End) {
         message = `scored ${event.value.score}`;
@@ -36,6 +35,12 @@ export function Players(props) {
         message = `started a new game`;
       } else if (event.type === GameEvent.System) {
         message = event.value.msg;
+      }
+      else{
+        message = `no message`;
+      }
+      if (event.from === undefined) {
+        event.from = `an unidentified player`
       }
 
       messageArray.push(
@@ -47,7 +52,6 @@ export function Players(props) {
     }
     return messageArray;
   }
-
   return (
     <div className='players'>
       Player

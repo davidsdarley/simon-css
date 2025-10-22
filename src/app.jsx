@@ -14,31 +14,31 @@ export default function App() {
   
   <div className="body bg-dark text-light">
 
-    <header class="container-fluid">
-      <nav class="navbar fixed-top navbar-dark">
-        <a class="navbar-brand" href="#">Simon<sup>&reg;</sup></a>
+    <header className="container-fluid">
+      <nav className="navbar fixed-top navbar-dark">
+        <a className="navbar-brand" href="#">Simon<sup>&reg;</sup></a>
 
-        <menu class="navbar-nav">
-          <li class="nav-item">
+        <menu className="navbar-nav">
+          <li className="nav-item">
             <NavLink className="nav-link" to="">
             Login
             </NavLink>
 
           </li>
 
-          <li class="nav-item">
+          <li className="nav-item">
             <NavLink className="nav-link" to="play">
             Play
             </NavLink>
           </li>
 
-          <li class="nav-item">
+          <li className="nav-item">
             <NavLink className="nav-link" to="scores">
             Scores
             </NavLink>
           </li>
 
-          <li class="nav-item">
+          <li className="nav-item">
             <NavLink className="nav-link" to="about">
             About
             </NavLink>            
@@ -60,10 +60,10 @@ export default function App() {
 
 
     
-    <footer class="bg-dark text-white-50">
-      <div class="container-fluid">
-        <span class="text-reset">Author Name(s)</span>
-        <a class="text-reset" href="https://github.com/webprogramming260/simon-css">Source</a>
+    <footer className="bg-dark text-white-50">
+      <div className="container-fluid">
+        <span className="text-reset">Author Name(s)</span>
+        <a className="text-reset" href="https://github.com/webprogramming260/simon-css">Source</a>
       </div>
     </footer>
     

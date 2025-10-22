@@ -41,6 +41,7 @@ export function SimonGame(props) {
     setPlaybackPos(0);
     await buttonDance(1);
     increaseSequence([]);
+    
 
     // Let other players know a new game has started
     GameNotifier.broadcastEvent(userName, GameEvent.Start, {});
