@@ -53,8 +53,24 @@ function App() {
         </header>
 
         <Routes>
+          
           <Route
             path='/'
+            element={
+              <Login
+                userName={userName}
+                authState={authState}
+                onAuthChange={(userName, authState) => {
+                  setAuthState(authState);
+                  setUserName(userName);
+                }}
+              />
+            }
+            exact
+          />
+
+          <Route
+            path='/login'
             element={
               <Login
                 userName={userName}
